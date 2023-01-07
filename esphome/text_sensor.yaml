@@ -1,0 +1,15 @@
+text_sensor:
+  - platform: template
+    name: "${friendly_name} Uptime Readable"
+    id: ${devicename}_uptime_human
+    icon: mdi:clock-start
+
+  - platform: wifi_info
+    ip_address:
+      name: "${friendly_name} IP Address"
+    mac_address:
+      name: "${friendly_name} Mac Address"
+
+  - platform: version
+    name: "${friendly_name} Version"
+    hide_timestamp: true
