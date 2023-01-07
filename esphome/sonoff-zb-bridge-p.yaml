@@ -1,0 +1,19 @@
+substitutions:
+  devicename: sonoffzbbridgep
+  friendly_name: zb-bridge-p
+  
+packages:
+  zb-bridge-p:
+  url: https://github.com/Giancky79/ZB-Bridge-P
+  ref: main
+  files:
+     - packages/esphome.yaml
+     - packages/status_led.yaml
+     - packages/i2c.yaml
+     - packages/button_zigbee_reset.yaml
+     - packages/zeroconf.yaml
+  refresh: 0s
+
+external_components:
+  - source: github://tube0013/esphome-stream-server-v2
+#  - source: github://oxan/esphome-stream-server
