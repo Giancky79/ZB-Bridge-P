@@ -1,0 +1,9 @@
+output:
+  - platform: gpio
+    pin: GPIO21
+    inverted: True
+    id: status_bls
+
+  - platform: ledc
+    pin: GPIO4
+    id: rtttl_out 
