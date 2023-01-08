@@ -1,0 +1,18 @@
+light:
+  # blue led
+  - platform: status_led
+    name: "Blue"
+    id: blue
+    pin: 
+      number: GPIO2
+      inverted: true
+    internal: True
+    restore_mode: ALWAYS_OFF
+
+  # green led
+  - platform: binary
+    name: "Green"
+    id: green
+    output: status_bls
+    internal: True
+    restore_mode: ALWAYS_OFF
