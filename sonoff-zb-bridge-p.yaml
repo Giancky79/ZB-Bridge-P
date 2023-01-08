@@ -12,6 +12,7 @@
 # 26 = sda
 # 27 = button key
 # 33
+
 substitutions:
   devicename: sonoffzbbridgep
   friendly_name: zb-bridge-p
@@ -22,10 +23,15 @@ packages:
   ref: main
   files:
      - esphome/esphome.yaml
-     - esphome/status_led.yaml
-     - packages/i2c.yaml
-     - packages/button_zigbee_reset.yaml
-     - packages/zeroconf.yaml
+     - esphome/binary_sensor.yaml
+     - esphome/light.yaml
+     - esphome/output.yaml
+     - esphome/rtttl.yaml
+     - esphome/sensor.yaml
+     - esphome/output.yaml
+     - esphome/switch.yaml
+     - esphome/text_sensor.yaml
+     - esphome/uart.yaml
   refresh: 0s
 
 external_components:
