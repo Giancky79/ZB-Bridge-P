@@ -1,7 +1,7 @@
 # ZB-Bridge-P
 Sonoff ZB-Bridge-P
 
-only if you want a backeup the original bin
+only if you want a backup the original bin
 
 python3 -m pip install --upgrade pip
 python3 -m pip install esptool
