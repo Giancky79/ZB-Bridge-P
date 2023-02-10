@@ -35,5 +35,5 @@ packages:
   refresh: 0s
 
 external_components:
-  - source: github://tube0013/esphome-stream-server-v2
-#  - source: github://oxan/esphome-stream-server
+#  - source: github://tube0013/esphome-stream-server-v2
+  - source: github://oxan/esphome-stream-server
