@@ -4,8 +4,8 @@ esphome:
     priority: 800
     then:
       - rtttl.play: 'long:d=1,o=5,b=100:e6'
-      - delay: 500ms 
-      - switch.turn_on: status_ok
+      - delay: 4s 
+      - light.turn_on: blue
 
 esp32:
   board: esp32dev
