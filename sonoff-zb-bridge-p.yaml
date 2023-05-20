@@ -4,10 +4,10 @@
 # 13
 # 14
 # 15 = zRST
-# 19 = rx zigbee
+# 23 = rx zigbee
 # 21 = green led
 # 22 = boot
-# 23 = tx zigbee
+# 19 = tx zigbee
 # 25 = scl
 # 26 = sda
 # 27 = button key
@@ -35,5 +35,4 @@ packages:
   refresh: 0s
 
 external_components:
-#  - source: github://tube0013/esphome-stream-server-v2
   - source: github://oxan/esphome-stream-server
