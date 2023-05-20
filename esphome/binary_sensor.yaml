@@ -1,5 +1,8 @@
 binary_sensor:
-  
+ 
+  - platform: status
+    name: "${friendly_name} Status"
+
   - platform: gpio
     pin: 
       number: 27
@@ -19,5 +22,5 @@ binary_sensor:
         - switch.turn_on: fwupdate
 
   - platform: stream_server
-    stream_server: ss
-    name: "ZBBridge-P Serial Connected"
+    connected:
+      name: Connected from PC
