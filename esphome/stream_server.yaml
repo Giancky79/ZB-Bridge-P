@@ -1,4 +1,3 @@
 stream_server:
   uart_id: uart_zb
-  id: ss
   port: 6638
