@@ -20,14 +20,5 @@ api:
   reboot_timeout: 0s
 
 ota:
-  
-wifi:
-  ssid: wifi_ssid
-  password: wifi_password
-
-  # Enable fallback hotspot (captive portal) in case wifi connection fails
-  ap:
-    ssid: ${devicename}
-    password: ap_password
 
 captive_portal:
