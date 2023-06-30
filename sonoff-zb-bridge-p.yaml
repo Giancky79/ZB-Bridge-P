@@ -16,6 +16,15 @@
 substitutions:
   devicename: sonoffzbbridgep
   friendly_name: zb-bridge-p
+
+wifi:
+  ssid: wifi_ssid
+  password: wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: ${devicename}
+    password: ap_password
   
 packages:
   remote-packages:
@@ -33,6 +42,7 @@ packages:
       esphome/switch.yaml,
       esphome/text_sensor.yaml,
       esphome/uart.yaml,
+      esphome/stream_server.yaml,
    ]  
 
 external_components:
