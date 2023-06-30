@@ -18,21 +18,22 @@ substitutions:
   friendly_name: zb-bridge-p
   
 packages:
-  zb-bridge-p:
-  url: https://github.com/Giancky79/ZB-Bridge-P
-  ref: main
-  files:
-     - esphome/esphome.yaml
-     - esphome/binary_sensor.yaml
-     - esphome/light.yaml
-     - esphome/output.yaml
-     - esphome/rtttl.yaml
-     - esphome/sensor.yaml
-     - esphome/output.yaml
-     - esphome/switch.yaml
-     - esphome/text_sensor.yaml
-     - esphome/uart.yaml
-  refresh: 0s
+  remote-packages:
+    url: https://github.com/Giancky79/ZB-Bridge-P
+    ref: main
+    refresh: 0s
+    files: [
+      esphome/esphome.yaml
+      esphome/binary_sensor.yaml
+      esphome/light.yaml
+      esphome/output.yaml
+      esphome/rtttl.yaml
+      esphome/sensor.yaml
+      esphome/output.yaml
+      esphome/switch.yaml
+      esphome/text_sensor.yaml
+      esphome/uart.yaml
+   ]  
 
 external_components:
   - source: github://oxan/esphome-stream-server
