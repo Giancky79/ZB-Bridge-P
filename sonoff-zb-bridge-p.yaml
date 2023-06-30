@@ -23,16 +23,16 @@ packages:
     ref: main
     refresh: 0s
     files: [
-      esphome/esphome.yaml
-      esphome/binary_sensor.yaml
-      esphome/light.yaml
-      esphome/output.yaml
-      esphome/rtttl.yaml
-      esphome/sensor.yaml
-      esphome/output.yaml
-      esphome/switch.yaml
-      esphome/text_sensor.yaml
-      esphome/uart.yaml
+      esphome/esphome.yaml,
+      esphome/binary_sensor.yaml,
+      esphome/light.yaml,
+      esphome/output.yaml,
+      esphome/rtttl.yaml,
+      esphome/sensor.yaml,
+      esphome/output.yaml,
+      esphome/switch.yaml,
+      esphome/text_sensor.yaml,
+      esphome/uart.yaml,
    ]  
 
 external_components:
