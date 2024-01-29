@@ -6,7 +6,7 @@
 # 15 = zRST
 # 23 = rx zigbee
 # 21 = green led
-# 22 = boot
+# 22 = zBSL
 # 19 = tx zigbee
 # 25 = scl
 # 26 = sda
@@ -34,6 +34,7 @@ packages:
     files: [
       esphome/esphome.yaml,
       esphome/binary_sensor.yaml,
+      esphome/button.yaml,
       esphome/light.yaml,
       esphome/output.yaml,
       esphome/rtttl.yaml,
