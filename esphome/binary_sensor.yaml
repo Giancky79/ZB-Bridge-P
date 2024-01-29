@@ -19,7 +19,7 @@ binary_sensor:
       min_length: 50ms
       max_length: 350ms
       then:
-        - switch.turn_on: fwupdate
+        - switch.turn_on: fw_update
 
   - platform: stream_server
     connected:
