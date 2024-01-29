@@ -3,9 +3,13 @@ esphome:
   on_boot:
     priority: 800
     then:
-      - rtttl.play: 'long:d=1,o=5,b=100:e6'
-      - delay: 4s 
+      - switch.turn_on: zigbee_rst
+      - delay: 15ms
+      - switch.turn_off: zigbee_rst
+      - delay: 1s
       - light.turn_on: blue
+      - delay: 1s
+      - rtttl.play: 'long:d=1,o=5,b=100:e6' 
 
 esp32:
   board: esp32dev
@@ -13,7 +17,6 @@ esp32:
     type: arduino
 
 logger:
-  level: DEBUG
   baud_rate: 0
 
 api:
