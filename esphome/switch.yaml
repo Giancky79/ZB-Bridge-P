@@ -1,14 +1,8 @@
 switch:
 
-  - platform: restart
-    name: "${friendly_name} Restart"
-    id: reboot 
-    internal: true
-    icon: "mdi:restart"
-
   - platform: template
     name: "${friendly_name} fw update"
-    id: fwupdate
+    id: fw_update
     turn_on_action:
       - light.turn_off: blue
       - delay: 1s 
@@ -17,28 +11,32 @@ switch:
       - switch.turn_on: zigbee_rst
       - delay: 1s
       - switch.turn_off: zigbee_rst
-      - logger.log: "wait for fw update"
-      - delay: 12s
+      - delay: 2s
+      - switch.turn_off: zigbee_bsl
+      - delay: 1s
       - light.turn_on: green
-      - switch.turn_off: zigbee_bsl 
+      - rtttl.play: "long:d=1,o=5,b=100:e6"
       - logger.log: "please try to write fw on ip:6638, if a error of Timeout waiting for ACK/NACK after 'Synch (0x55 0x55)' repeat with fw update"
-      - delay: 15s
+      - delay: 20s
       - light.turn_off: green
-      - delay: 5s
+      - delay: 1s
       - light.turn_on: blue
+      - delay: 1s
+      - switch.turn_off: fw_update
+      - logger.log: "remember to reboot after update fw zigbee"
 
   - platform: gpio
     id: zigbee_rst
     pin: 15
     name: "Zigbee RST"
-    inverted: true
-    internal: true
+    inverted: True
+    internal: True
     restore_mode: ALWAYS_OFF
 
   - platform: gpio
     id: zigbee_bsl
     pin: 22
     name: "Zigbee BSL"
-    inverted: False
-    internal: true
+    inverted: True
+    internal: True
     restore_mode: ALWAYS_OFF
