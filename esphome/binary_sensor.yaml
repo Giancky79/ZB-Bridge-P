@@ -14,7 +14,7 @@ binary_sensor:
       min_length: 1s
       max_length: 3s
       then:
-        - switch.turn_on: reboot
+        - button.press: reboot
     on_double_click:
       min_length: 50ms
       max_length: 350ms
