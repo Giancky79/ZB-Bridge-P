@@ -1,0 +1,8 @@
+button:
+
+  - platform: restart
+    name: "${friendly_name} Restart"
+    id: reboot 
+    internal: True
+    icon: "mdi:restart"
+    disabled_by_default: True
