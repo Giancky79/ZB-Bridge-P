@@ -1,5 +1,6 @@
 uart:
-  id: uart_zb
+  id: uart_bus
   rx_pin: GPIO23
   tx_pin: GPIO19
   baud_rate: 115200
+  
